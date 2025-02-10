@@ -15,3 +15,21 @@ In these diff files users can target specific script functions, script variables
 All of the above can be changed (renamed/redefined) or deleted, and new ones can be inserted.
 
 Specific syntax details of the custom modlist syntax to follow.
+
+## Build
+
+### Requirements
+
+- git
+- cmake
+- vcpkg
+- Visual Studip 2022
+
+```
+git clone https://github.com/K-Patsouris/DyingLightPatcher
+cd DyingLightPatcher
+cmake --preset=vcpkg
+```
+
+Visual Studio solution files will be written in /build. Feel free to edit `CMakePresets.json` to add new presets if you have earlier version of Visual Studio.
+Note: there are several `static_assert`s for release mode, which means debug mod will not compile unless you comment them.
